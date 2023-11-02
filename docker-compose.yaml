@@ -1,0 +1,11 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+  db:
+    image: "mysql:8.0"
+    environment:
+      MYSQL_ROOT_PASSWORD: meow
+      MYSQL_DATABASE: my_flask_app
